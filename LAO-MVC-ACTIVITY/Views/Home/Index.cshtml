@@ -1,0 +1,109 @@
+﻿@using Todo.Models.ViewModels
+@using LAO_MVC_ACTIVITY.Models;
+
+@model ToDoViewModel
+
+<div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-11 col-md-11 col-sm-12">
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        @if (TempData["SuccessDeleteMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessDeleteMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        @if (TempData["SuccessUpdateMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessUpdateMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        <div class="gap"></div>
+            <h1 style="text-align: center;">Stuff I Gotta Do</h1>
+            <hr>
+        <div class="gap"></div>
+        
+        <table class="table">
+            <thead>
+                <tr style="background-color: #19875441; color: white; text-align: center;">
+                <th scope="col" style="border-top-left-radius: 10px;">ID</th>
+                <th scope="col">Task Description</th>
+
+                <th scope="col">
+                    Category
+                    <select id="categoryDropdown" onchange="filterByCategory()" class="form-select form-select-sm d-inline-block w-auto ms-2">
+                        <option value="">All</option>
+                        @foreach (var cat in Model.Categories.Distinct())
+                        {
+                            <option value="@cat">@cat</option>
+                        }
+                    </select>
+                </th>
+
+                <th scope="col">
+                    Priority
+                    <select id="priorityDropdown" onchange="filterByPriority()" class="form-select form-select-sm d-inline-block w-auto ms-2">
+                        <option value="">All</option>
+                        @foreach (var prio in Model.Priorities)
+                        {
+                            <option value="@prio">@prio</option>
+                        }
+                    </select>
+                </th>
+
+                <th scope="col">Done</th>
+
+                <th scope="col" style="border-top-right-radius: 10px;">Modify</th>
+            </tr>
+            </thead>
+
+            @if (!Model.TodoList.Any())
+            {
+                <tr>
+                    <td colspan="5" class="text-center">Nothing to do yet—go enjoy your day!</td>
+                </tr>
+            }
+
+            <tbody>
+                @foreach (var t in Model.TodoList)
+                {
+                    <tr id="task-row-@t.Id" class="@(t.IsCompleted ? "completed-task" : "")" style="color:white;">
+                        <th class="todos-column text-center" scope="row">@t.Id</th>
+                        <td class="todos-column">@t.Name</td>
+                        <td class="todos-column">@t.Category</td>
+                        <td class="todos-column">@t.Priority</td>
+                        <td class="todos-column text-center">
+                            <input type="checkbox" onchange="toggleComplete(@t.Id, this.checked)" @(t.IsCompleted ? "checked" : "") />
+                        </td>
+                        <td class="buttons-column text-center">
+                            <input type="submit" class="btn btn-danger" value="Delete" onClick="deleteTodo(@t.Id)" />
+                            <input type="submit" class="btn btn-primary" value="Update" onClick="populateForm(@t.Id)" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

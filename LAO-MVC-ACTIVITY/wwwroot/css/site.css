@@ -1,0 +1,91 @@
+/* Font-face declarations */
+@font-face {
+  font-family: 'NeueMontreal-Bold';
+  src: url('/fonts/NeueMontreal-Bold.otf');
+}
+
+@font-face {
+  font-family: 'NeueMontreal-Regular';
+  src: url('/fonts/NeueMontreal-Regular.otf');
+}
+
+@font-face {
+  font-family: 'NeueMontreal-Light';
+  src: url('/fonts/NeueMontreal-Light.otf');
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.buttons-column {
+    text-align: end;
+}
+
+.todos-column {
+    vertical-align: middle;
+}
+
+.gap {
+  height: 15px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1A1A1A;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, label {
+  color: white;
+}
+
+tr {
+  background-color: rgba(0, 0, 0, 0.238);
+}
+
+.completed-task {
+  background-color: #19875417 !important; 
+  color: gray !important;
+}
+
+#drop-down option {
+  color: white;
+}
+
+#categoryDropdown option {
+  color: white;
+}
+
+#priorityDropdown option {
+  color: white;
+}
+
+hr {
+  color:white;
+}
+
+* {
+  font-family: 'NeueMontreal-Regular';
+  background-color: #1A1A1A;
+}

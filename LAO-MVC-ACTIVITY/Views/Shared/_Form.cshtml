@@ -1,0 +1,47 @@
+@using Todo.Models.ViewModels
+@model ToDoViewModel
+@using LAO_MVC_ACTIVITY.Models;
+
+<form id="form-action" asp-action="Insert" method="post" class="form-horizontal" role="form">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <h1 style="text-align: center;">Let’s Get Things Done!</h1>
+            <hr>
+            <div class="gap"></div>
+
+            <input asp-for="Todo.Id" type="hidden" id="Todo_Id" />
+
+            <label asp-for="Todo.Name" class="form-label">Task Description:</label>
+            <input asp-for="Todo.Name" id="Todo_Name" class="form-control" />
+            <span asp-validation-for="Todo.Name" class="text-danger"></span>
+            <div class="gap"></div>
+    
+            <label asp-for="Todo.Category" class="form-label">Category:</label>
+            <input asp-for="Todo.Category" id="Todo_Category" class="form-control" />
+            <span asp-validation-for="Todo.Category" class="text-danger"></span>
+            <div class="gap"></div>
+
+            <label asp-for="Todo.Priority" class="form-label">Priority (High, Medium, Low):</label>
+            <select id="drop-down" asp-for="Todo.Priority" class="form-control" placeholder="Specify the category">
+                <option value="" disabled selected hidden></option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <span asp-validation-for="Todo.Priority" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+            <div class="gap"></div>
+            <div class="text-center">
+                <input type="submit" id="form-button" class="btn btn-success" value="Add" style="padding-left: 70px; padding-right: 70px;"/>
+            </div>
+        </div>
+    </div>
+</form>
