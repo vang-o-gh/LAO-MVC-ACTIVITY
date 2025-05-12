@@ -58,3 +58,4 @@ C:\Users\Lenovo\LAO-MVC-ACTIVITY\LAO-MVC-ACTIVITY\bin\Debug\net8.0\runtimes\win-
 C:\Users\Lenovo\LAO-MVC-ACTIVITY\LAO-MVC-ACTIVITY\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Lenovo\LAO-MVC-ACTIVITY\LAO-MVC-ACTIVITY\obj\Debug\net8.0\LAO-MVC-ACTIVITY.csproj.AssemblyReference.cache
 C:\Users\Lenovo\LAO-MVC-ACTIVITY\LAO-MVC-ACTIVITY\obj\Debug\net8.0\LAO-MVC-.1286CB1B.Up2Date
+C:\Users\Lenovo\LAO-MVC-ACTIVITY\LAO-MVC-ACTIVITY\obj\Debug\net8.0\LAO-MVC-ACTIVITY.sourcelink.json

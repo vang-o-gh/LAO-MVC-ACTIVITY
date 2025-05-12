@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LAO-MVC-ACTIVITY")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80337dc2f9bb7f4a10de7ccf1dfbd434eacf3eee")]
 [assembly: System.Reflection.AssemblyProductAttribute("LAO-MVC-ACTIVITY")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LAO-MVC-ACTIVITY")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

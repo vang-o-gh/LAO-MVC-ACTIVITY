@@ -56,12 +56,25 @@ html, body {
   margin: 0 auto;
 }
 
-h1, label {
+h1, h2 {
   color: white;
+}
+
+h6{
+  color: gray;
+}
+
+label {
+  color: rgb(175, 175, 175);
 }
 
 tr {
   background-color: rgba(0, 0, 0, 0.238);
+}
+
+td {
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.254);
 }
 
 .completed-task {
@@ -83,6 +96,26 @@ tr {
 
 hr {
   color:white;
+}
+
+.btn-danger {
+  color: #dc3746;
+  background-color: transparent;
+  border-radius: 100px;
+  font-size: small;
+}
+
+.btn-primary {
+  color: #0d6efd;
+  background-color: transparent;
+  border-radius: 100px;
+  font-size: small;
+}
+
+#Todo_Name, #Todo_Category,#drop-down {
+  border-radius: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px; 
 }
 
 * {
